@@ -3,7 +3,7 @@
 This is a fully native, Java-based, RESTful API that provides all of the **publicly facing** MedLink data (taken from their public websites) and serves it up to clients in a RESTful format. 
 
 ## Sample Payload
-```
+``` javascript
 [
   {
     "name": "Bethesda Health Center",
