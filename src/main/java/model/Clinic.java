@@ -17,6 +17,7 @@ public class Clinic {
     private Double fee;
     private Double latitude;
     private Double longitude;
+    private String imageUrl;
 
     private Clinic(String name,
                    String streetAddress,
@@ -31,7 +32,8 @@ public class Clinic {
                    Double fee,
                    Boolean isSpanishSpeaking,
                    Double latitude,
-                   Double longitude) {
+                   Double longitude,
+                   String imageUrl) {
         this.name = name;
         this.streetAddress = streetAddress;
         this.zipCode = zipCode;
@@ -46,6 +48,7 @@ public class Clinic {
         this.isSpanishSpeaking = isSpanishSpeaking;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.imageUrl = imageUrl;
     }
 
     public String getName() {
@@ -104,6 +107,9 @@ public class Clinic {
         return longitude;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
 
     public static class Builder {
         private String name;
@@ -120,6 +126,7 @@ public class Clinic {
         private Boolean isSpanishSpeaking;
         private Double latitude;
         private Double longitude;
+        private String imageUrl;
 
         public Builder setName(String name) {
             this.name = name;
@@ -191,6 +198,11 @@ public class Clinic {
             return this;
         }
 
+        public Builder setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+
         public Clinic build() {
             return new Clinic(name,
                     streetAddress,
@@ -205,7 +217,8 @@ public class Clinic {
                     fee,
                     isSpanishSpeaking,
                     latitude,
-                    longitude);
+                    longitude,
+                    imageUrl);
         }
     }
 }
